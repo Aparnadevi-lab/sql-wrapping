@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://your-repo-url'
+                git url: 'https://github.com/Aparnadevi-lab/sql-wrapping'
             }
         }
         stage('Wrap SQL Files') {
@@ -18,3 +18,4 @@ pipeline {
         }
     }
 }
+
