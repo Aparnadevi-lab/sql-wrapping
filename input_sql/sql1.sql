@@ -1,0 +1,1 @@
+select * from  AT_EX_RUNCHART_SINGLECLICK;

@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                git url: 'https://your-repo-url'
+            }
+        }
+        stage('Wrap SQL Files') {
+            steps {
+                sh 'python3 scripts/wrap_sql.py'
+            }
+        }
+        stage('Archive Results') {
+            steps {
+                archiveArtifacts artifacts: 'output_sql/*', fingerprint: true
+            }
+        }
+    }
+}
